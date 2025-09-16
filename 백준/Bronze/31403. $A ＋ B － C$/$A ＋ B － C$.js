@@ -1,5 +1,5 @@
-const inputs = require('fs').readFileSync(0, 'utf-8').trim().split('\n');
-const calcFn = ([a, b, c]) => a + b - c;
+const inputs = require('fs').readFileSync(0, 'utf-8').trim().split('\n').map(String);
+const [a, b, c] = inputs;
 
-console.log(calcFn([...inputs].map(Number)));
-console.log(calcFn([...inputs].map(String)));
+console.log(Number(a) + Number(b) - Number(c));
+console.log(a + b - c);
